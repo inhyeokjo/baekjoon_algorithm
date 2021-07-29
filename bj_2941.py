@@ -22,4 +22,6 @@
 # 출력
 # 입력으로 주어진 단어가 몇 개의 크로아티아 알파벳으로 이루어져 있는지 출력한다.
 
-print(len(input().replace('c=','a').replace('c-','a').replace('dz=','a').replace('d-','a').replace('lj','a').replace('nj','a').replace('s=','a').replace('z=','a')))
+print(
+    len(input().replace('c=', 'a').replace('c-', 'a').replace('dz=', 'a').replace('d-', 'a').replace('lj', 'a').replace(
+        'nj', 'a').replace('s=', 'a').replace('z=', 'a')))

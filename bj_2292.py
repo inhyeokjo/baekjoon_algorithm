@@ -11,13 +11,13 @@
 
 import math
 
-n=int(input())
-x = math.ceil((n-1)/6)
+n = int(input())
+x = math.ceil((n - 1) / 6)
 
 a = 0
 while True:
-    x-=a
+    x -= a
     if x <= 0:
-        print(a+1)
+        print(a + 1)
         break
     a += 1

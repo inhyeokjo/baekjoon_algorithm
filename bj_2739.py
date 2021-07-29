@@ -7,6 +7,6 @@
 # 출력
 # 출력형식과 같게 N*1부터 N*9까지 출력한다.
 
-n=int(input())
-for i in range(1,10):
-    print(f"{n} * {i} = {n*i}")
+n = int(input())
+for i in range(1, 10):
+    print(f"{n} * {i} = {n * i}")

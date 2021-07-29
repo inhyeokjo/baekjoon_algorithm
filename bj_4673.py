@@ -20,17 +20,18 @@
 # 10,000보다 작거나 같은 셀프 넘버를 한 줄에 하나씩 증가하는 순서로 출력한다.
 
 def findSelfNum(num):
-    min = num-len(str(num))*9
-    if min <1:
-        min =1
+    min = num - len(str(num)) * 9
+    if min < 1:
+        min = 1
     for i in range(min, num):
         qNum = i
         for j in str(i):
-            qNum+=int(j)
+            qNum += int(j)
         if qNum == num:
             return
     print(num)
     return
 
-for i in range(1,10001):
+
+for i in range(1, 10001):
     findSelfNum(i)

@@ -13,8 +13,8 @@
 # 출력
 # 첫째 줄에 최댓값을 출력하고, 둘째 줄에 최댓값이 몇 번째 수인지를 출력한다.
 
-a=[]
+a = []
 for i in range(9):
     a.append(int(input()))
 max_value = max(a)
-print(f"{max_value} \n{a.index(max_value)+1}")
+print(f"{max_value} \n{a.index(max_value) + 1}")

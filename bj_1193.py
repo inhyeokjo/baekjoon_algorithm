@@ -19,6 +19,16 @@
 
 import math
 
-n = input()
-point = math.ceil((n-1)/6)
-
+n = int(input())
+x = 1
+bigger = 0;
+while True:
+    bigger += x
+    if n <= bigger:
+        break
+    x += 1
+sub = bigger - n
+if x % 2 == 1:
+    print(f"{1 + sub}/{x - sub}")
+else:
+    print(f"{x - sub}/{1 + sub}")

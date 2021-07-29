@@ -16,9 +16,8 @@ num = []
 for i in range(3):
     num.append(int(input()))
 
-abc = str(num[0]*num[1]*num[2])
+abc = str(num[0] * num[1] * num[2])
 for i in abc:
-    easy_map[i] +=1
+    easy_map[i] += 1
 for i in "0123456789":
     print(easy_map[i])
-

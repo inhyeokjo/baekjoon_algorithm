@@ -9,14 +9,14 @@
 
 
 # alp = {chr(i):0 for i in range(ord('A'), ord('Z')+1)}
-s=list(input().upper())
-alp_num = [0 for i in range(ord('A')+ord('Z')+1)]
+s = list(input().upper())
+alp_num = [0 for i in range(ord('A') + ord('Z') + 1)]
 for i in s:
-    alp_num[ord(i)-ord('A')] +=1
+    alp_num[ord(i) - ord('A')] += 1
 val = max(alp_num)
 ind = alp_num.index(val)
 alp_num.pop(ind)
 if max(alp_num) == val:
     print('?')
 else:
-    print(chr(ind+ord('A')))
+    print(chr(ind + ord('A')))

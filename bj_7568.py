@@ -26,16 +26,16 @@ size = []
 ranking = []
 n = int(input())
 for i in range(n):
-    a,b = map(int, sys.stdin.readline().strip().split())
+    a, b = map(int, sys.stdin.readline().strip().split())
     size.append(a)
     size.append(b)
     ranking.append(1)
 
 for i in range(n):
-    for j in range(i+1, n):
-        if size[2*i] < size[2*j]:
-            if size[2*i+1] < size[2*j+1]:
-                ranking[i]+=1
+    for j in range(i + 1, n):
+        if size[2 * i] < size[2 * j]:
+            if size[2 * i + 1] < size[2 * j + 1]:
+                ranking[i] += 1
         if size[2 * i] > size[2 * j]:
             if size[2 * i + 1] > size[2 * j + 1]:
                 ranking[j] += 1

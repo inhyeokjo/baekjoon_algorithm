@@ -12,4 +12,3 @@ import sys
 n = int(input())
 the_list = list(map(int, sys.stdin.readline().strip().split()))
 print(min(the_list), max(the_list))
-

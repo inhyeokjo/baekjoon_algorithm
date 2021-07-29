@@ -15,10 +15,11 @@
 
 import sys
 import math
-a,b,c = map(int, sys.stdin.readline().strip().split())
+
+a, b, c = map(int, sys.stdin.readline().strip().split())
 
 answer = -1
-if c<=b:
+if c <= b:
     print(answer)
 else:
-    print(math.floor(a/(c-b))+1)
+    print(math.floor(a / (c - b)) + 1)

@@ -11,5 +11,5 @@
 
 else_list = []
 for i in range(10):
-    else_list.append(int(input())%42)
+    else_list.append(int(input()) % 42)
 print(len(set(else_list)))

@@ -12,6 +12,7 @@
 # 첫째 줄에 새로운 평균을 출력한다. 실제 정답과 출력값의 절대오차 또는 상대오차가 10-2 이하이면 정답이다.
 
 import sys
+
 n = int(input())
 score = list(map(int, sys.stdin.readline().strip().split()))
-print(sum(map(lambda x : x/max(score)*100, score))/n)
+print(sum(map(lambda x: x / max(score) * 100, score)) / n)

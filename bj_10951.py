@@ -13,5 +13,5 @@ import sys
 
 read = sys.stdin.read().strip().split("\n")
 for i in read:
-    a,b = map(int, i.split())
-    print(a+b)
+    a, b = map(int, i.split())
+    print(a + b)

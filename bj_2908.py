@@ -16,8 +16,7 @@ a.reverse()
 b.reverse()
 a = int(''.join(a))
 b = int(''.join(b))
-if a<b:
+if a < b:
     print(b)
 else:
     print(a)
-

@@ -10,7 +10,7 @@
 # 만약, 어떤 알파벳이 단어에 포함되어 있지 않다면 -1을 출력한다. 단어의 첫 번째 글자는 0번째 위치이고, 두 번째 글자는 1번째 위치이다.
 
 s = input()
-for i in range(ord('a'), ord('z')+1):
+for i in range(ord('a'), ord('z') + 1):
     if chr(i) not in s:
         print('-1 ', end='')
     else:

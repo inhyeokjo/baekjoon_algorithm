@@ -19,7 +19,7 @@ for i in range(int(input())):
     sequ_score = 0
     for i in answer:
         if i == "O":
-            sequ_score +=1
+            sequ_score += 1
         else:
             sequ_score = 0
         final_score += sequ_score

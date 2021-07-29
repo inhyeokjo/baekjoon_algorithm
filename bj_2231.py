@@ -13,20 +13,19 @@ import sys
 
 n = sys.stdin.readline().strip()
 
-
-check_size_limit = int(n)-9*len(n)
-if check_size_limit<1:
+check_size_limit = int(n) - 9 * len(n)
+if check_size_limit < 1:
     check_size_limit = 1
 
 n = int(n)
-check_point = n-1
-m=0
-while(check_point>=check_size_limit):
+check_point = n - 1
+m = 0
+while (check_point >= check_size_limit):
     hap = 0
     for i in str(check_point):
         hap += int(i)
-    if check_point+ hap == n:
+    if check_point + hap == n:
         m = check_point
-    check_point -=1
+    check_point -= 1
 
 print(m)

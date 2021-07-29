@@ -9,17 +9,17 @@
 
 def find(n):
     total_num = 0
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         break_point = False
         if len(str(i)) <= 2:
             total_num += 1
             continue
         else:
             num_list = list(map(int, list(str(i))))
-            tolerance = num_list[1]-num_list[0]
+            tolerance = num_list[1] - num_list[0]
             last_num = num_list[1]
             for j in num_list[2:]:
-                if tolerance != j-last_num:
+                if tolerance != j - last_num:
                     break_point = True
                     break
                 last_num = j

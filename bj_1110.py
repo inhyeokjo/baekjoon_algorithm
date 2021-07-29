@@ -13,18 +13,19 @@
 # 출력
 # 첫째 줄에 N의 사이클 길이를 출력한다.
 def make_two_world(a):
-    if int(a)<10:
-        return "0"+a
+    if int(a) < 10:
+        return "0" + a
     else:
         return a
+
 
 a = input()
 next = make_two_world(a)
 num = 0
 a = int(a)
 while True:
-    next = next[1]+make_two_world(str(int(next[0])+int(next[1])))[1]
-    num +=1
+    next = next[1] + make_two_world(str(int(next[0]) + int(next[1])))[1]
+    num += 1
     if int(next) == a:
         print(num)
         break

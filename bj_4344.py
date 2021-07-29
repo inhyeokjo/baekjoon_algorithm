@@ -11,15 +11,14 @@
 
 import sys
 
-
 for i in range(int(input())):
     num_score_list = list(map(int, sys.stdin.readline().strip().split()))
     num = num_score_list[0]
     score_list = num_score_list[1:]
-    mean = sum(score_list)/num
+    mean = sum(score_list) / num
     count = 0
     for i in score_list:
         if i > mean:
-            count +=1
-    rate = count/num*100
+            count += 1
+    rate = count / num * 100
     print(f"{rate:.3f}%")

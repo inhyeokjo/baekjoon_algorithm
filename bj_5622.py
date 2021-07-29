@@ -23,6 +23,7 @@ def find_num(char):
         target_num -= 1
         if char == 'Z':
             target_num -= 1
-    return (target_num-ord('A'))//3+2
+    return (target_num - ord('A')) // 3 + 2
 
-print(sum([find_num(i)+1 for i in input()]))
+
+print(sum([find_num(i) + 1 for i in input()]))
