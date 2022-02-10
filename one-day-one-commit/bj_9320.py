@@ -1,4 +1,5 @@
 import sys
+import decimal
 
 input = sys.stdin.readline
 
@@ -44,14 +45,14 @@ def can_make_24(numbers_combination):
                     error = True
                     break
                 numbers_combination_copy.insert(operation_order, operate_result)
-            if not error and numbers_combination_copy[0] == 24:
+            if not error and float(numbers_combination_copy[0]) == 24:
                 return True
     return False
 
 
 for _ in range(int(input())):
     yes = False
-    numbers = list(map(int, input().strip().split()))
+    numbers = list(map(decimal.Decimal, input().strip().split()))
     numbers_combinations = make_numbers_combination(numbers)
     for numbers_combination in numbers_combinations:
         if can_make_24(numbers_combination):
