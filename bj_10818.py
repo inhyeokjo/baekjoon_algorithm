@@ -9,6 +9,16 @@
 
 import sys
 
-n = int(input())
-the_list = list(map(int, sys.stdin.readline().strip().split()))
-print(min(the_list), max(the_list))
+input = sys.stdin.readline
+
+input()
+array = list(map(int, input().split()))
+min_element = array[0]
+for element in array[1:]:
+    if min_element > element:
+        min_element = element
+max_element = array[0]
+for element in array[1:]:
+    if max_element < element:
+        max_element = element
+print(min_element, max_element)
