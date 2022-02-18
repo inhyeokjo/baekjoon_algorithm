@@ -5,7 +5,7 @@ from collections import defaultdict
 input = sys.stdin.readline
 
 n, c = map(int, input().split())
-message = list(map(int, input().split()))
+message = input().split()
 frequency_dict = defaultdict(int)
 
 for i in message:
@@ -15,4 +15,4 @@ result = []
 for item, frequency in sorted_message_dict:
     for i in range(frequency):
         result.append(item)
-print(' '.join(result))
+print(" ".join(result))

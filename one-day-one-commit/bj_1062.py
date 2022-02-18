@@ -1,45 +1,28 @@
 import sys
 
+input = sys.stdin.readline
 
-def dfs(idx: int, count: int, learn: list, words: list):
-    global result
-
-    if count == K - 5:
-        tmp = 0
-        for word in words:
-            isContain = True
-            for w in word:
-                if not learn[ord(w) - ord('a')]:
-                    isContain = False
-                    break
-            if isContain:
-                tmp += 1
-        result = max(tmp, result)
-        return
-
-    for i in range(idx, 26):
-        if not learn[i]:
-            learn[i] = True
-            dfs(i, count + 1, learn, words)
-            learn[i] = False
+n, k = map(int, input().split())
+word_list = [set(input()) for _ in range(n)]
 
 
-N, K = map(int, input().split())
+def get_possible_word(selected_words):
+    map(lambda x: x-selected_words, maintain_words)
 
-if K < 5:
+
+def f(max_depth, depth, maintain_words_list, node, selected_words):
+    if depth == max_depth:
+        return get_possible_word()
+    max_number = 0
+    for maintain_word in maintain_words_list:
+        possible_word = f(max_depth, depth + 1, maintain_words_list.copy(), maintain_word, selected_words)
+        max_number = max(max_number, possible_word)
+    return max_number
+
+if k < 5:
     print(0)
-    sys.exit()
-elif K == 26:
-    print(N)
-    sys.exit()
-
-words = [set(sys.stdin.readline().rstrip()) for _ in range(N)]
-learn = [0] * 26
-result = 0
-
-for c in ('a', 'c', 'i', 'n', 't'):
-    learn[ord(c) - ord('a')] = True
-
-dfs(0, 0, learn, words)
-
-print(result)
+else:
+    k -= 5
+    maintain_words = list(map(lambda x: x - set('aicnt'), word_list))
+    maintain_words_set = set(''.join(maintain_words))
+    f()
