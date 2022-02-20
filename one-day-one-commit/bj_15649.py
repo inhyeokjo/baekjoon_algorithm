@@ -14,7 +14,7 @@ def find_list(m, selected_elements, remained_list):
         appended_selected_elements.append(remained_element)
         removed_remained_list = remained_list.copy()
         removed_remained_list.remove(remained_element)
-        my_list = find_list(m, appended_selected_elements, removed_remained_list)
+        my_list = find_list(m, appended_sele    cted_elements, removed_remained_list)
         possible_list.extend(my_list)
     return possible_list
 
