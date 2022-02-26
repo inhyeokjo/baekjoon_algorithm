@@ -1,32 +1,20 @@
-import sys
+n, m = map(int, input().split())
 
-input = sys.stdin.readline
+answer = 0
+price_list = []
 
-color_value = {'black': 0,
-               'brown': 1,
-               'red': 2,
-               'orange': 3,
-               'yellow': 4,
-               'green': 5,
-               'blue': 6,
-               'violet': 7,
-               'grey': 8,
-               'white': 9
-               }
-color_mul = {'black': 1,
-             'brown': 10,
-             'red': 100,
-             'orange': 1000,
-             'yellow': 10000,
-             'green': 100000,
-             'blue': 1000000,
-             'violet': 10000000,
-             'grey': 100000000,
-             'white': 1000000000
-             }
+for _ in range(m):
+    price = tuple(map(int, input().split()))
+    price_list.append(price)
 
-a = color_value[input().strip()]
-b = color_value[input().strip()]
-c = color_mul[input().strip()]
+six_list = sorted(price_list, key=lambda x : x[0])
+one_list = sorted(price_list, key=lambda x : x[1])
 
-print((a*10+b)*c)
+if six_list[0][0] <= one_list[0][1] * 6:
+    answer = six_list[0][0] * (n // 6) + one_list[0][1] * (n % 6)
+    if six_list[0][0] < one_list[0][1] * (n % 6):
+        answer = six_list[0][0] * (n//6 + 1)
+else:
+    answer = one_list[0][1] * n
+
+print(answer)
