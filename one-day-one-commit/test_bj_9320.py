@@ -11,3 +11,4 @@ print("-----------------------------")
 for i in range(6561):
     if not py[i] == ja[i]:
         print(i)
+        
